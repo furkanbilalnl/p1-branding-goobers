@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#040f16">
-    <meta name="description" content="Neem contact op met Goobers.">
+    <meta name="description" content="Neem contact op met Goobers Streetwear.">
     <title>Goobers — Contact</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,21 +13,66 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="../index.html" aria-label="Goobers home">
+      <a class="brand" href="../index.html" aria-label="Goobers Streetwear home">
         <span class="brand-mark" aria-hidden="true"></span>
         <span>GOOBERS</span>
       </a>
       <nav class="site-nav" aria-label="Hoofdnavigatie">
         <a href="../index.html">Home</a>
-        <a href="lineup.html">Line-up</a>
-        <a href="over-ons.html">Over ons</a>
+        <a href="lineup.html">Shop</a>
+        <a href="over-ons.html">Ons verhaal</a>
         <a href="contact.html" aria-current="page">Contact</a>
       </nav>
     </header>
-    <main id="main-content"></main>
+    <main id="main-content">
+      <section class="page-hero content-width">
+        <p class="eyebrow">Goobers support</p>
+        <h1>Vraag over je fit?<br><span>We helpen je.</span></h1>
+        <p>Vraag over een maat, de collectie of het merk? Stuur ons een bericht.</p>
+      </section>
+
+      <section class="contact-section content-width">
+        <div class="contact-aside">
+          <p class="eyebrow">Klantenservice</p>
+          <h2>We staan voor je klaar.</h2>
+          <p>Goobers Streetwear is een fictief merkconcept voor een schoolproject. De collectie en prijzen zijn voorbeelden; er worden geen echte bestellingen verwerkt.</p>
+          <div class="contact-note"><span aria-hidden="true">✳</span><p>Het formulier is een HTML-voorbeeld en verstuurt nog geen berichten. Voor een echte winkel moet het gekoppeld worden aan een veilige backend.</p></div>
+        </div>
+
+        <form class="contact-form">
+          <div class="form-field">
+            <label for="name">Je naam</label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="Bijv. Sam de Vries" required>
+          </div>
+          <div class="form-field">
+            <label for="email">E-mailadres</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="sam@voorbeeld.nl" required>
+          </div>
+          <div class="form-field">
+            <label for="subject">Waar gaat je bericht over?</label>
+            <select id="subject" name="subject" required>
+              <option value="" selected disabled>Kies een onderwerp</option>
+              <option value="vraag">Een vraag</option>
+              <option value="maatadvies">Maatadvies</option>
+              <option value="collectie">Vraag over de collectie</option>
+              <option value="anders">Iets anders</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="message">Je bericht</label>
+            <textarea id="message" name="message" rows="5" placeholder="Hoe kunnen we je helpen?" required></textarea>
+          </div>
+          <label class="checkbox-field" for="privacy">
+            <input id="privacy" name="privacy" type="checkbox" required>
+            <span>Ik geef toestemming om mijn gegevens te gebruiken om op dit bericht te reageren.</span>
+          </label>
+          <button class="button button-dark" type="submit">Verstuur bericht <span aria-hidden="true">↗</span></button>
+        </form>
+      </section>
+    </main>
     <footer class="site-footer">
       <a class="footer-brand" href="../index.html">GOOBERS</a>
-      <p>© 2026 Goobers <span aria-hidden="true">·</span> Samen maken we er iets bijzonders van.</p>
+      <p>© 2026 Goobers Streetwear <span aria-hidden="true">·</span> Straatstijl. Helemaal van jou.</p>
     </footer>
   </body>
 </html>
