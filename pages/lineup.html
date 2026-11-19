@@ -3,8 +3,6 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#040f16">
-    <meta name="description" content="Shop de Goobers Streetwear hoodiecollectie.">
     <title>Goobers — Shop</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,17 +10,14 @@
     <link rel="stylesheet" href="../style.css">
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="../index.html" aria-label="Goobers Streetwear home">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span>GOOBERS</span>
-      </a>
-      <nav class="site-nav" aria-label="Hoofdnavigatie">
+    <header class="ust-menu">
+      <a class="brand" href="../index.html">GOOBERS</a>
+      <nav class="site-nav">
         <a href="../index.html">Home</a>
-        <div class="nav-dropdown">
-          <a class="nav-dropdown-toggle" href="lineup.html" aria-current="page">Shop <span aria-hidden="true">▾</span></a>
-          <div class="nav-dropdown-menu">
-            <a href="lineup.html#lineup-heading">Drop 01 Collectie</a>
+        <div class="dropdown">
+          <a href="lineup.html" class="aktif">Shop ▾</a>
+          <div class="dropdown-icerik">
+            <a href="lineup.html">Collectie</a>
             <a href="lineup.html#maattabel">Maattabel</a>
           </div>
         </div>
@@ -30,75 +25,118 @@
         <a href="contact.html">Contact</a>
       </nav>
     </header>
-    <main id="main-content">
-      <section class="page-hero content-width">
-        <p class="eyebrow">Goobers Streetwear · Drop 01</p>
-        <h1>Relaxte fits.<br><span>Eigen regels.</span></h1>
+
+    <main>
+      <section class="sayfa-baslik sayfa-ortala">
+        <p class="kucuk-baslik">Goobers Streetwear · Drop 01</p>
+        <h1>Relaxte fits.<br><span class="kirmizi-yazi">Eigen regels.</span></h1>
         <p>Ontdek de eerste Goobers-hoodiecollectie: comfortabele fits, opvallende details en genoeg ruimte om je eigen stijl te dragen.</p>
       </section>
 
-      <section class="lineup-section content-width" aria-labelledby="lineup-heading">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Drop 01 · Streetwear essentials</p>
-            <h2 id="lineup-heading">Shop de hoodies</h2>
+      <section class="urunler-bolumu sayfa-ortala">
+        <h2>Shop de hoodies</h2>
+
+        <div class="kartlar">
+          <div class="urun-karti">
+            <img src="../img/hoodie-studio.jpg" alt="Everyday Hoodie">
+            <p class="urun-tipi">Relaxed fit · Zwart</p>
+            <h3>Everyday Hoodie</h3>
+            <p>Een zachte basic voor elke dag. <strong>€ 59,95</strong></p>
+            <button class="buton buton-koyu" id="siparis-buton" onclick="sepeteEkle()">Bestel deze hoodie</button>
           </div>
-          <p>Conceptcollectie. De foto’s zijn stijlbeelden; de producten zijn fictieve ontwerpen.</p>
-        </div>
-        <div class="cards">
-          <div class="card">
-            <div class="card-photo"><img src="../img/hoodie-studio.jpg" alt="Twee modellen in minimalistische hoodies" width="1200" height="800"><a class="photo-credit" href="https://www.pexels.com/photo/men-wearing-plain-hoodies-5840463/" target="_blank" rel="noopener noreferrer">Foto: cottonbro studio / Pexels</a></div>
-            <div class="card-copy"><p class="card-type">Relaxed fit · Zwart</p><h3>Everyday Hoodie</h3><p>Een zachte basic voor elke dag. <strong>€ 59,95</strong></p></div>
+
+          <div class="urun-karti">
+            <img src="../img/hoodie-urban.jpg" alt="Concrete Hoodie">
+            <p class="urun-tipi">Oversized · Grijs</p>
+            <h3>Concrete Hoodie</h3>
+            <p>Extra ruimte, clean design. <strong>€ 64,95</strong></p>
           </div>
-          <div class="card">
-            <div class="card-photo"><img src="../img/hoodie-urban.jpg" alt="Model met een grijze hoodie op een skatepark" width="1200" height="800"><a class="photo-credit" href="https://www.pexels.com/photo/thoughtful-young-man-on-ramp-5158837/" target="_blank" rel="noopener noreferrer">Foto: Budgeron Bach / Pexels</a></div>
-            <div class="card-copy"><p class="card-type">Oversized · Grijs</p><h3>Concrete Hoodie</h3><p>Extra ruimte, clean design. <strong>€ 64,95</strong></p></div>
+
+          <div class="urun-karti">
+            <img src="../img/hoodie-skate.jpg" alt="After Hours Hoodie">
+            <p class="urun-tipi">Graphic fit · Donkerblauw</p>
+            <h3>After Hours Hoodie</h3>
+            <p>Een relaxte laag voor lange dagen. <strong>€ 69,95</strong></p>
           </div>
-          <div class="card">
-            <div class="card-photo"><img src="../img/hoodie-skate.jpg" alt="Twee mensen in hoodies in een stedelijke omgeving" width="1200" height="800"><a class="photo-credit" href="https://www.pexels.com/photo/two-people-sitting-on-a-wooden-bench-wearing-hoodies-7236120/" target="_blank" rel="noopener noreferrer">Foto: cottonbro studio / Pexels</a></div>
-            <div class="card-copy"><p class="card-type">Graphic fit · Donkerblauw</p><h3>After Hours Hoodie</h3><p>Een relaxte laag voor lange dagen. <strong>€ 69,95</strong></p></div>
+
+          <div class="urun-karti">
+            <img src="../img/hoodie-black.jpg" alt="Shadow Hoodie">
+            <p class="urun-tipi">Relaxed fit · Zwart</p>
+            <h3>Shadow Hoodie</h3>
+            <p>Subtiele details, sterke uitstraling. <strong>€ 59,95</strong></p>
           </div>
-          <div class="card">
-            <div class="card-photo"><img src="../img/hoodie-black.jpg" alt="Model draagt een zwarte hoodie in een casual setting" width="1200" height="800"><a class="photo-credit" href="https://www.pexels.com/photo/woman-in-black-hoodie-sitting-789712/" target="_blank" rel="noopener noreferrer">Foto: Nien Tran / Pexels</a></div>
-            <div class="card-copy"><p class="card-type">Relaxed fit · Zwart</p><h3>Shadow Hoodie</h3><p>Subtiele details, sterke uitstraling. <strong>€ 59,95</strong></p></div>
+
+          <div class="urun-karti">
+            <img src="../img/hoodie-classic.jpg" alt="Goober Classic Hoodie">
+            <p class="urun-tipi">Oversized · Zwart</p>
+            <h3>Goober Classic Hoodie</h3>
+            <p>De signature hoodie van de drop. <strong>€ 64,95</strong></p>
           </div>
-          <div class="card">
-            <div class="card-photo"><img src="../img/hoodie-classic.jpg" alt="Model in een zwarte hoodie met een blad in de mond" width="1200" height="800"><a class="photo-credit" href="https://www.pexels.com/photo/man-wearing-black-pullover-hoodie-977391/" target="_blank" rel="noopener noreferrer">Foto: Min An / Pexels</a></div>
-            <div class="card-copy"><p class="card-type">Oversized · Zwart</p><h3>Goober Classic Hoodie</h3><p>De signature hoodie van de drop. <strong>€ 64,95</strong></p></div>
-          </div>
-          <div class="card">
-            <div class="card-photo"><img src="../img/hoodie-color.jpg" alt="Model draagt een opvallende hoodie in een streetwear-outfit" width="1200" height="800"><a class="photo-credit" href="https://www.pexels.com/photo/man-in-cap-with-bag-13431729/" target="_blank" rel="noopener noreferrer">Foto: Mizuno K / Pexels</a></div>
-            <div class="card-copy"><p class="card-type">Relaxed fit · Koraal</p><h3>Color Pop Hoodie</h3><p>Een kleuraccent dat meteen opvalt. <strong>€ 62,95</strong></p></div>
+
+          <div class="urun-karti">
+            <img src="../img/hoodie-color.jpg" alt="Color Pop Hoodie">
+            <p class="urun-tipi">Relaxed fit · Koraal</p>
+            <h3>Color Pop Hoodie</h3>
+            <p>Een kleuraccent dat meteen opvalt. <strong>€ 62,95</strong></p>
           </div>
         </div>
       </section>
 
-      <section id="maattabel" class="schedule-section">
-        <div class="content-width">
-          <div class="section-heading">
-            <div><p class="eyebrow">Vind jouw fit</p><h2>Maattabel hoodies</h2></div>
-            <p>De maten zijn voorbeeldmaten in centimeters. Check altijd de maatinfo van het echte product.</p>
-          </div>
-          <div class="table-wrap">
+      <section id="maattabel" class="tablo-bolumu">
+        <div class="sayfa-ortala">
+          <p class="kucuk-baslik">Vind jouw fit</p>
+          <h2>Maattabel hoodies</h2>
+          <div class="tablo-kutu">
             <table>
-              <caption>Voorbeeldmaten van de Goobers-hoodiecollectie, gemeten plat</caption>
-              <thead><tr><th scope="col">Maat</th><th scope="col">Borstbreedte</th><th scope="col">Lengte</th></tr></thead>
+              <thead>
+                <tr>
+                  <th>Maat</th>
+                  <th>Borstbreedte</th>
+                  <th>Lengte</th>
+                </tr>
+              </thead>
               <tbody>
-                <tr><td>XS</td><td>52 cm</td><td>66 cm</td></tr>
-                <tr><td>S</td><td>55 cm</td><td>69 cm</td></tr>
-                <tr><td>M</td><td>58 cm</td><td>72 cm</td></tr>
-                <tr><td>L</td><td>61 cm</td><td>75 cm</td></tr>
-                <tr><td>XL</td><td>64 cm</td><td>78 cm</td></tr>
-                <tr><td>XXL</td><td>67 cm</td><td>81 cm</td></tr>
+                <tr>
+                  <td>XS</td>
+                  <td>52 cm</td>
+                  <td>66 cm</td>
+                </tr>
+                <tr>
+                  <td>S</td>
+                  <td>55 cm</td>
+                  <td>69 cm</td>
+                </tr>
+                <tr>
+                  <td>M</td>
+                  <td>58 cm</td>
+                  <td>72 cm</td>
+                </tr>
+                <tr>
+                  <td>L</td>
+                  <td>61 cm</td>
+                  <td>75 cm</td>
+                </tr>
+                <tr>
+                  <td>XL</td>
+                  <td>64 cm</td>
+                  <td>78 cm</td>
+                </tr>
+                <tr>
+                  <td>XXL</td>
+                  <td>67 cm</td>
+                  <td>81 cm</td>
+                </tr>
               </tbody>
             </table>
           </div>
         </div>
       </section>
     </main>
+
     <footer class="site-footer">
       <a class="footer-brand" href="../index.html">GOOBERS</a>
-      <p>© 2026 Goobers Streetwear <span aria-hidden="true">·</span> Straatstijl. Helemaal van jou.</p>
+      <p>© 2026 Goobers Streetwear - Straatstijl. Helemaal van jou.</p>
     </footer>
+    <script src="../script.js"></script>
   </body>
 </html>

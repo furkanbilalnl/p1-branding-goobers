@@ -3,8 +3,6 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#040f16">
-    <meta name="description" content="Goobers Streetwear — oversized hoodies en streetwear met een eigen karakter.">
     <title>Goobers — Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,17 +10,14 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Goobers Streetwear home">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span>GOOBERS</span>
-      </a>
-      <nav class="site-nav" aria-label="Hoofdnavigatie">
-        <a href="index.html" aria-current="page">Home</a>
-        <div class="nav-dropdown">
-          <a class="nav-dropdown-toggle" href="pages/lineup.html">Shop <span aria-hidden="true">▾</span></a>
-          <div class="nav-dropdown-menu">
-            <a href="pages/lineup.html#lineup-heading">Drop 01 Collectie</a>
+    <header class="ust-menu">
+      <a class="brand" href="index.html">GOOBERS</a>
+      <nav class="site-nav">
+        <a href="index.html" class="aktif">Home</a>
+        <div class="dropdown">
+          <a href="pages/lineup.html">Shop ▾</a>
+          <div class="dropdown-icerik">
+            <a href="pages/lineup.html">Collectie</a>
             <a href="pages/lineup.html#maattabel">Maattabel</a>
           </div>
         </div>
@@ -30,49 +25,55 @@
         <a href="pages/contact.html">Contact</a>
       </nav>
     </header>
-    <main id="main-content">
+
+    <main>
       <section class="hero">
-        <img class="hero-image" src="img/streetwear-hero.jpg" alt="Model in een donkere hoodie kijkt uit over het landschap" width="1200" height="800">
-        <p class="eyebrow">Goobers Streetwear · Drop 01</p>
-        <h1>GOOBERS</h1>
-        <p class="hero-slogan">Straatstijl. Helemaal van jou.</p>
-        <p class="hero-copy">Comfortabele hoodies, relaxte fits en kleuren die voor zichzelf spreken. Draag wat bij jou past.</p>
-        <a class="button button-light" href="pages/lineup.html">Shop de collectie <span aria-hidden="true">↗</span></a>
-        <a class="hero-credit" href="https://www.pexels.com/photo/a-person-in-gray-hoodie-standing-5785893/" target="_blank" rel="noopener noreferrer">Foto: Alex BPH / Pexels</a>
-        <span class="hero-sticker" aria-hidden="true">DROP<br>01 /<br>GOOBERS</span>
+        <img class="hero-resim" src="img/streetwear-hero.jpg" alt="Goobers hoodie">
+        <div class="hero-yazi">
+          <p class="kucuk-baslik">Goobers Streetwear · Drop 01</p>
+          <h1>GOOBERS</h1>
+          <p class="hero-slogan">Straatstijl. Helemaal van jou.</p>
+          <p class="hero-aciklama">Comfortabele hoodies, relaxte fits en kleuren die voor zichzelf spreken. Draag wat bij jou past.</p>
+          <a class="buton buton-acik" href="pages/lineup.html">Shop de collectie</a>
+        </div>
       </section>
 
-      <section class="home-intro content-width">
-        <p class="eyebrow">Kleding voor jouw eigen route</p>
-        <h2>Niet gemaakt om<br><span>in op te gaan.</span></h2>
+      <section class="home-intro sayfa-ortala">
+        <div>
+          <p class="kucuk-baslik">Kleding voor jouw eigen route</p>
+          <h2>Niet gemaakt om <span class="kirmizi-yazi">in op te gaan.</span></h2>
+        </div>
         <p>Goobers maakt streetwear voor dagen die vanzelf hun eigen plan trekken. Ontdek onze hoodies, leer het verhaal achter het merk kennen of stuur ons een bericht.</p>
       </section>
 
-      <section class="teasers content-width" aria-label="Ontdek Goobers Streetwear">
-        <a class="teaser teaser-lineup" href="pages/lineup.html">
-          <span class="teaser-number">01 / DROP 01</span>
-          <h2>Jouw nieuwe<br>go-to hoodie.</h2>
-          <span class="teaser-link">Shop de collectie <span aria-hidden="true">↗</span></span>
+      <section class="teasers sayfa-ortala">
+        <a class="teaser-kutu kutu-mavi" href="pages/lineup.html">
+          <span>01 / DROP 01</span>
+          <h2>Jouw nieuwe go-to hoodie.</h2>
+          <span>Shop de collectie -></span>
         </a>
-        <a class="teaser teaser-about" href="pages/over-ons.html">
-          <span class="teaser-number">02 / HET MERK</span>
-          <h2>Geen regels.<br>Wel een eigen stijl.</h2>
-          <span class="teaser-link">Ons verhaal <span aria-hidden="true">↗</span></span>
+        <a class="teaser-kutu kutu-kirmizi" href="pages/over-ons.html">
+          <span>02 / HET MERK</span>
+          <h2>Geen regels. Wel een eigen stijl.</h2>
+          <span>Ons verhaal -></span>
         </a>
-        <a class="teaser teaser-contact" href="pages/contact.html">
-          <span class="teaser-number">03 / VRAGEN?</span>
-          <h2>We helpen je<br>graag verder.</h2>
-          <span class="teaser-link">Neem contact op <span aria-hidden="true">↗</span></span>
+        <a class="teaser-kutu kutu-koyu" href="pages/contact.html">
+          <span>03 / VRAGEN?</span>
+          <h2>We helpen je graag verder.</h2>
+          <span>Neem contact op -></span>
         </a>
       </section>
 
-      <section class="home-note">
+      <section class="alt-banner">
         <p>Draag het op jouw manier.<br><strong>Goobers. Out of the ordinary.</strong></p>
+        <button class="buton buton-koyu" id="drop-buton" onclick="dropKayit()">Meld je aan voor Drop 01</button>
       </section>
     </main>
+
     <footer class="site-footer">
       <a class="footer-brand" href="index.html">GOOBERS</a>
-      <p>© 2026 Goobers Streetwear <span aria-hidden="true">·</span> Straatstijl. Helemaal van jou.</p>
+      <p>© 2026 Goobers Streetwear - Straatstijl. Helemaal van jou.</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
