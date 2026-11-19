@@ -19,7 +19,13 @@
       </a>
       <nav class="site-nav" aria-label="Hoofdnavigatie">
         <a href="../index.html">Home</a>
-        <a href="lineup.html" aria-current="page">Shop</a>
+        <div class="nav-dropdown">
+          <a class="nav-dropdown-toggle" href="lineup.html" aria-current="page">Shop <span aria-hidden="true">▾</span></a>
+          <div class="nav-dropdown-menu">
+            <a href="lineup.html#lineup-heading">Drop 01 Collectie</a>
+            <a href="lineup.html#maattabel">Maattabel</a>
+          </div>
+        </div>
         <a href="over-ons.html">Ons verhaal</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -67,7 +73,7 @@
         </div>
       </section>
 
-      <section class="schedule-section">
+      <section id="maattabel" class="schedule-section">
         <div class="content-width">
           <div class="section-heading">
             <div><p class="eyebrow">Vind jouw fit</p><h2>Maattabel hoodies</h2></div>

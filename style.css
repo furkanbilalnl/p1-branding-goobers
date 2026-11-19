@@ -1,3 +1,4 @@
+/* === GEZAMENLIJKE CSS: Huisstijl (kleuren, lettertype, header, nav, dropdown & footer) === */
 :root {
   color-scheme: light;
   --color-red: #b80c09;
@@ -101,6 +102,45 @@ a:focus-visible {
 
 .site-nav a:hover,
 .site-nav a[aria-current="page"] {
+  color: var(--color-red);
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 20;
+  display: none;
+  min-width: 190px;
+  padding: 8px 0;
+  border: 1px solid rgb(4 15 22 / 14%);
+  background: var(--color-white);
+  box-shadow: 0 10px 24px rgb(4 15 22 / 12%);
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  display: block;
+}
+
+.nav-dropdown-menu a {
+  display: block;
+  padding: 10px 16px;
+  white-space: nowrap;
+}
+
+.nav-dropdown-menu a:hover {
+  background: #f0f3f4;
   color: var(--color-red);
 }
 
@@ -288,15 +328,17 @@ main {
   font-size: 12px;
 }
 
+/* === SAMEN: 3 Teaser-blokken op de homepage met flexbox === */
 .teasers {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   padding-bottom: 100px;
 }
 
 .teaser {
   display: flex;
+  flex: 1 1 280px;
   min-height: 290px;
   flex-direction: column;
   align-items: flex-start;
@@ -395,14 +437,18 @@ main {
   font-size: 10px;
 }
 
+/* === STUDENT A: Kaarten naast elkaar met flexbox, ruimte in en tussen de kaarten === */
 .cards {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 18px;
 }
 
 .card {
-  min-width: 0;
+  flex: 1 1 calc((100% - 36px) / 3);
+  min-width: 260px;
+  padding: 14px;
+  border: 1px solid rgb(4 15 22 / 12%);
   background: var(--color-white);
 }
 
@@ -476,6 +522,7 @@ main {
   color: var(--color-ink);
 }
 
+/* === STUDENT B: Opgemaakte tabel (gekleurde kopregel, ruimte in cellen, randen, om en om gekleurde rijen) === */
 .schedule-section {
   padding: 76px 0 90px;
   background: #f0f3f4;
@@ -488,6 +535,7 @@ main {
 table {
   width: 100%;
   border-collapse: collapse;
+  background: var(--color-white);
   text-align: left;
 }
 
@@ -501,15 +549,24 @@ caption {
 th,
 td {
   padding: 14px 16px;
-  border-bottom: 1px solid rgb(4 15 22 / 14%);
+  border: 1px solid rgb(4 15 22 / 18%);
   font-size: 11px;
 }
 
-th {
-  color: var(--color-red);
-  font-size: 9px;
+thead th {
+  background: var(--color-ink);
+  color: var(--color-white);
+  font-size: 10px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+tbody tr:nth-child(even) {
+  background: #e4ecef;
+}
+
+tbody tr:hover {
+  background: rgb(1 186 239 / 15%);
 }
 
 td:first-child {
@@ -656,13 +713,16 @@ td:first-child {
   font-size: 9px;
 }
 
+/* === STUDENT C: Opgemaakt formulier (labels boven velden, velden even breed, opvallende verzendknop) === */
 .contact-form {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 
 .form-field {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 7px;
 }
 
@@ -718,8 +778,14 @@ td:first-child {
   accent-color: var(--color-red);
 }
 
-.contact-form .button {
-  justify-self: start;
+.button-submit {
+  align-self: flex-start;
+  background: var(--color-red);
+  color: var(--color-white);
+}
+
+.button-submit:hover {
+  background: var(--color-ink);
 }
 
 .site-footer {
@@ -812,11 +878,12 @@ td:first-child {
   }
 
   .teasers {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     padding-bottom: 68px;
   }
 
   .teaser {
+    flex: 1 1 auto;
     min-height: 230px;
   }
 
@@ -832,8 +899,13 @@ td:first-child {
   }
 
   .cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px 12px;
+  }
+
+  .card {
+    flex: 1 1 calc((100% - 12px) / 2);
+    min-width: 140px;
+    padding: 10px;
   }
 
   .card-copy {
@@ -888,8 +960,8 @@ td:first-child {
 }
 
 @media (min-width: 641px) and (max-width: 900px) {
-  .cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .card {
+    flex: 1 1 calc((100% - 18px) / 2);
   }
 
   .hero-sticker {
